@@ -11,7 +11,11 @@ public class forTest {
         //String str=Warmup1.front22("dineck");
         //Boolean str=Warmup1.startHi("hi dineck!");
         //String str=Warmup1.delDel("ddeldineck");
-        String str=Warmup1.startOz("oxx");
+        //String str=Warmup1.startOz("oxx");
+        //Boolean str=Warmup1.stringE("Eheh");
+        //Boolean str=Warmup1.lastDigit(3, 113);
+        //String str=Warmup1.endUp("hi");
+        String str=Warmup1.everyNth("Miracle", 2);
         System.out.println(str.toString());
     }
 }

@@ -57,8 +57,8 @@ public class Warmup1 {
     }
 
     public static int max1020(int a, int b) {
-        
-        if ((a >= 10 && a <= 20) && a > b ) {
+
+        if ((a >= 10 && a <= 20) && a > b) {
             return a;
         }
         if (b > a && (b >= 10 && b <= 20)) {
@@ -66,7 +66,7 @@ public class Warmup1 {
         }
         return 0;
     }
-    
+
     public static String missingChar(String str, int n) {
         StringBuilder str1 = new StringBuilder(str);
         str = (str1.deleteCharAt(n)).toString();
@@ -142,4 +142,45 @@ public class Warmup1 {
             return str;
         }
     }
+
+    public static boolean stringE(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e') {
+                count++;
+            }
+        }
+        return (count >= 1 && count <= 3);
+    }
+
+    public static boolean lastDigit(int a, int b) {
+        String strA = Integer.toString(a);
+        String strB = Integer.toString(b);
+        return strB.charAt(strB.length() - 1) == strA.charAt(strA.length() - 1);
+    }
+
+    public static String endUp(String str) {
+        if (str.length() > 0) {
+            if (str.length() > 3) {
+                return str.substring(0, str.length() - 3)
+                        + str.substring(str.length() - 3, str.length()).toUpperCase();
+            }
+            return str.toUpperCase();
+        }
+        return "";
+    }
+
+    public static String everyNth(String str, int n) {
+        int k = 0;
+        String res="";
+        if (str.length() > 0) {
+            do {
+                res=res+str.charAt(k);
+                k = k + n;
+            } while (k < str.length());
+            return res;
+        }
+        return "";
+    }
+
 }
